@@ -102,12 +102,12 @@ body::-webkit-scrollbar {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     text-align: left;
-    padding: 5%;
+    padding: 10%;
     margin: auto;
 }
 .page2 .pg2-cont p{
     margin-top: 10px;
-    font-family:"Sacramento", cursive;
+    font-family:"Arial", cursive;
 }
 .pg2-final{
     display: flex;
@@ -191,14 +191,14 @@ font-size: 22px;
 .page2{
     width: 100%;
     height: auto;
-    padding: 5%;
+    padding: 10%;
 }
 .page2 h1{
     font-size: 18px;
 }
 .page2 p{
     font-size: 16px;
-    font-family:"Sacramento", cursive ;
+    font-family:"Arial", cursive ;
 }
 .responsebtn{
     width:30%;
@@ -216,7 +216,7 @@ font-size: 22px;
     box-shadow: 0 4ox 8px rgba(0, 0, 0, 0.2);
     margin-top: 60%;
     text-align: left;
-    font-family: "Sacramento", cursive;
+    font-family: "Arial", cursive;
     border: none;
     backdrop-filter: blur(2px);
 }
