@@ -106,7 +106,8 @@ body::-webkit-scrollbar {
 }
 .page2 .pg2-cont p{
     margin-top: 10px;
-    color:"darkgrey";
+    color:darkgrey;
+    font-weight:bold;
 }
 .pg2-final{
     display: flex;
@@ -225,4 +226,5 @@ font-size: 22px;
 }
 .text p{
      font-weight:bold;
+    color:darkgrey;
 }
