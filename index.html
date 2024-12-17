@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Proposal</title>
+    <link rel="stylesheet" href="./CSS/proposalstyle.css">
+    
+</head>
+<body>
+    <!-- Page 1 content -->
+    <div id="page01" class="page1">
+        <h1>I have Something Special For You....</h1>
+        <p>Are you ready to see this?</p>
+
+        <!-- Buttons to trigger the audio -->
+        <button class="playbtn" onclick="playAudio()">Yes</button>
+        <button class="playbtn"id="noButton" onmouseover="moveButton()">No</button>
+
+        <!-- Audio elements -->
+        <audio id="myAudio" autoplay loop>
+            <source src="./Images/Climax Bgm.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="sadAudio">
+            <source src="./Images/Keerthana Intro Bgm.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Page 2 content (hidden initially) -->
+    <div id="page2" class="page2">
+        <div class="pg2-cont">
+            <h1>Oyee...</h1>
+        <p>       em chestunnav nenu em cheppali anukuntuna ani alochistunnava? chalane cheppali ani undi kani
+            vishwamantha premani oka mata lo chupinchagalana... okavela chupinchina tarvata nv kadhante barinchagalana..?
+            ni meda premani varninchali ante na manasu lo matalu saripovatledu kani okkati matram chepta nv eduru paddithe 
+            vache feeling undi chusava adi nenu entha sampadisthe vastundi nv leni ara kshanam kuda yugam la anipistundi 
+            na manasulo ni meda unna premaki emaina viluva kattataniki undi ante adi malli na manase avutundi nv premistunna
+            ani okka mata cheppale kani prathikshanam samudram antha premani tesukuvachi ni paina kuripinchali ani undi eppudu vachi 
+            poye alalu laga premani kothaga parichayam cheyalani undi intha premani na manasulo dachukovali ante chala baruvu ga
+            undi okka mata cheppi konchem natho kalisi aa feeling ni panchukuntava....Ni dhooram na oopiri aapestundi ante nammutava.
+            prema puttadaniki 
+            okka kshanam chalu anta kadha aa kshanam kosam entha kalam aina asha ga eduruchusta.
+            mana thala rathanu rayataniki aa brahmadevudiki entha time pattindo naku telidu kani  
+            netho kalisi gadapali anukune kshanalu varninchataniki na jeevitham saripovatledu...netho ila matlade roju vastundi ani
+            kalalo kuda anukoledu kani chepakapothe kalalugane migilipotai emo ane bhayam tho cheptunna. anthaki naku nipaina prema entha 
+            ani telusukovali ani unte manaam eduru padda kshanam na kallaloki chudu telustundi aa kshanam gurthupettuko ni dhooram viluva na
+             kaalla venuka unna kanneru chebuthundi ninnu kalisinappudu vachina anandam entha ante na kanula chivarana aagipoyina anandapashpalu chebutai
+            enduku intha premistunna enduku intha ishtam ani adigithe na daggara samadhanam ledu vethakali ani kuda anukovatledu karanam leni premaku
+             minchi viluvainadhi emundi...anduke ila prathikshanam netho kalisi gadipithe adhe naku lakshakotlu. intha prema undi kabatte antha badha undi....</p>
+        <p>Idi antha chadivina taruvata nekem anipistundo naku teidu kani nv choodagaligithe rasina prathi aksharam venuka 
+            anthulenantha prema kanipistundi... </p>
+        <p>chivariga okkati,ee kshanam nv oppukunte kalsi prayanam cheddam na vanthu nenu mata isthunna jeevitham lo neku entha sampadinchi pedatano 
+            naku telidu kani ninnu kashatapettakunda chusukuvadaniki anukshanam nenu kashtapadatanu...gadiche kalam enni kashtalu techina netho kalsi
+        panchukovataniki nenu siddam ga unna...muginchali ante badhagane undi kani malli kalavali ante muginchaliga,anduke ippatiki ila mugistunna Take Care.</p>
+        <p>intha cheppina neku ee mata cheppakapothe ela...,</p>
+        <p>I Love You❤</p>
+        </div>
+        <div class="pg2-final">
+            <h1>I Miss You Raa</h1>
+        </div>
+        <div class="fin-btns">
+            <p>Ippudu cheppu nannu premistunnava...?(Do you love me)</p>
+            <button class="responsebtn"  id="yesButtonPage2" onclick="accepted()">Yes</button>
+            <button class="responsebtn" id="noButton2" onmouseover="moveButton2()">No</button>
+
+        </div>
+    </div>
+    <div id="page3" class="page3">
+        <canvas id="fireworksCanvas"></canvas>
+    </div>
+    <div id="page4" class="page4">
+        <div class="pg4-cont">
+            <canvas id="fireworksCanvas1"></canvas>
+            <div class="text">
+                <h1>I Love You ❤</h1>
+                <p>Eeeew....Ee roju nenu jeevithantham gurthupettukunta ee okka mata tho na mansu pulakrinchipoyindi....
+                    ika na gurinchi alochinchadam modalupettu,Netho ee prayanam theeram teliyani sandramla anipistundi aina
+                     parledu gamyam edaina nv vese prathi adugulonu neku thoduga unta...Nijanga ee kshanam na premaku pranam 
+                    posinattu anipistundi once again i miss you (it's more than i love you).....</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script>
+        // Function to play the 'Yes' audio and hide page1 with fade-out
+        function playAudio() {
+            const audio = document.getElementById('myAudio');
+            const page1 = document.getElementById('page01');
+            const page2 = document.getElementById('page2');
+            const noButton = document.getElementById('noButton');
+            const noButton2 =document.getElementById('noButton2');
+            const page3 =document.getElementById('page3');
+            audio.play();  // Play the audio for 'Yes'
+
+            // Add fade-out class to trigger the animation on page1
+            page1.classList.add('fade-out');
+
+            // Show page2 after fade-out animation completes
+            setTimeout(function() {
+                page1.style.display = "none";  // Hide page1 after fade-out
+                page2.style.display = "block"; // Show page2 after fade-out
+            }, 2000); // Timeout matches the fade-out animation duration (2s)
+        }
+        
+       // Function for accepting the proposal (Mobile/Desktop)
+       function accepted() {
+    const page2 = document.getElementById('page2');
+    const page3 = document.getElementById('page3');
+    const page4 = document.getElementById('page4');
+    const page1 = document.getElementById('pg1');
+
+    // Fade out Page 2
+    page2.classList.add('fade-out');
+
+    setTimeout(function () {
+    page2.style.display = "none";  // Hide page2 after fade-out
+
+    // Check screen width to decide which page to show
+    if (window.innerWidth <= 768) {
+        page4.style.display = "block";  // Show Page 4 for smaller screens
+        page3.style.display = "none";   // Ensure Page 3 is hidden
+    } else {
+        page3.style.display = "block";  // Show Page 3 for desktop
+        page4.style.display = "none";
+    }
+}, 2000); // Timeout matches the fade-out animation duration (2s)
+}
+
+        // Function to check and handle screen width
+        function handleScreenWidth() {
+            const yesButtonPage2 = document.getElementById('yesButtonPage2');
+            
+            // Show the "Yes" button for mobile screens (<= 600px)
+            if (window.innerWidth <= 600) {
+                yesButtonPage2.style.display = 'inline-block'; // Show the button
+            } else {
+                // Hide the button on larger screens
+            }
+        }
+
+        // Automatically call the function when the window is resized
+        window.addEventListener('resize', handleScreenWidth);
+        
+        // Initialize screen width check on page load
+        document.addEventListener('DOMContentLoaded', handleScreenWidth);
+        // Function to play the 'No' audio
+        function sadAudio() {
+            var audio = document.getElementById('sadAudio');
+            audio.play();  // Play the audio for 'No'
+        }
+        function moveButton() {
+      const newX = Math.floor(Math.random() * (window.innerWidth - noButton.offsetWidth));
+      const newY = Math.floor(Math.random() * (window.innerHeight - noButton.offsetHeight));
+      noButton.style.position = 'absolute';
+      noButton.style.left = newX + 'px';
+      noButton.style.top = newY + 'px';
+    }
+    function moveButton2() {
+      const newX = Math.floor(Math.random() * (window.innerWidth - noButton2.offsetWidth));
+      const newY = Math.floor(Math.random() * (window.innerHeight - noButton2.offsetHeight));
+      noButton2.style.position = 'absolute';
+      noButton2.style.left = newX + 'px';
+      noButton2.style.top = newY + 'px';
+    }
+   
+        
+    </script>
+   <script>
+    const canvas = document.getElementById('fireworksCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const canvas1 = document.getElementById('fireworksCanvas1');
+    const ctxx = canvas1.getContext('2d');
+
+    canvas1.width = window.innerWidth;
+    canvas1.height = window.innerHeight;
+
+
+    const fireworks = [];
+    const particles = [];
+
+    const fireworks1 = [];
+    const particles1 = [];
+
+
+    // Texts with fade-in effect
+    const texts = [
+        { text: "I Love You ❤ !", x: canvas.width / 2, y: canvas.height / 3.4, font: "18px Arial", color: "gray", alpha: 0 },
+        { text: "Eeeew....Ee roju nenu jeevithantham gurthupettukunta ee okka mata tho na mansu pulakrinchipoyindi.....", x: canvas.width / 2, y: canvas.height / 2.9, font: "18px Arial", color: "gray", alpha: 0},
+        { text: "ika na gurinchi alochinchadam modalupettu....", x: canvas.width / 2, y: canvas.height / 2.6, font: "18px Arial", color: "gray", alpha: 0},
+        { text: "Netho ee prayanam theeram teliyani sandramla anipistundi aina parledu gamyam edaina nv vese prathi adugulonu neku thoduga unta....", x: canvas.width / 2, y: canvas.height / 2.3, font: "18px Arial", color: "gray", alpha: 0},
+        {text: "Nijanga ee kshanam na premaku pranam posinattu anipistundi once again i miss you (it's more than i love you).....", x: canvas.width / 2, y: canvas.height / 2, font: "16px Arial", color: "gray", alpha: 0 },
+        
+    ];
+    const texts1 = [
+        { text: "", x: canvas.width / 3, y: canvas.height / 4.1, font: "18px Arial", color: "gray", alpha: 0 },
+        
+    ];
+
+    class Firework {
+        constructor(x, y, targetX, targetY) {
+            this.x = x;
+            this.y = y;
+            this.targetX = targetX;
+            this.targetY = targetY;
+            this.speed = 3;
+            this.radius = 3;
+            this.color = `hsl(${Math.random() * 180}, 100%, 50%)`;
+            this.exploded = false;
+        }
+
+        update() {
+            const dx = this.targetX - this.x;
+            const dy = this.targetY - this.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            const angle = Math.atan2(dy, dx);
+
+            if (distance > 5) {
+                this.x += Math.cos(angle) * this.speed;
+                this.y += Math.sin(angle) * this.speed;
+            } else {
+                this.exploded = true;
+                for (let i = 0; i < 50; i++) {
+                    particles.push(new Particle(this.targetX, this.targetY, this.color));
+                }
+            }
+
+            this.draw();
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        }
+    }
+    class Firework1 {
+        constructor(x, y, targetX, targetY) {
+            this.x = x;
+            this.y = y;
+            this.targetX = targetX;
+            this.targetY = targetY;
+            this.speed = 3;
+            this.radius = 3;
+            this.color = `hsl(${Math.random() * 180}, 100%, 50%)`;
+            this.exploded = false;
+        }
+
+        update() {
+            const dx = this.targetX - this.x;
+            const dy = this.targetY - this.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            const angle = Math.atan2(dy, dx);
+
+            if (distance > 5) {
+                this.x += Math.cos(angle) * this.speed;
+                this.y += Math.sin(angle) * this.speed;
+            } else {
+                this.exploded = true;
+                for (let i = 0; i < 50; i++) {
+                    particles1.push(new Particle1(this.targetX, this.targetY, this.color));
+                }
+            }
+
+            this.draw();
+        }
+
+        draw() {
+            ctxx.beginPath();
+            ctxx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctxx.fillStyle = this.color;
+            ctxx.fill();
+        }
+    }
+
+
+    class Particle1 {
+        constructor(x, y, color) {
+            this.x = x;
+            this.y = y;
+            this.color = color;
+            this.radius = Math.random() * 2 + 1;
+            this.speedX = Math.random() * 4 - 2;
+            this.speedY = Math.random() * 4 - 2;
+            this.alpha = 1;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.alpha -= 0.02;
+            this.draw();
+        }
+
+        draw() {
+            ctxx.save();
+            ctxx.globalAlpha = this.alpha;
+            ctxx.beginPath();
+            ctxx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctxx.fillStyle = this.color;
+            ctxx.fill();
+            ctxx.restore();
+        }
+    }
+    class Particle {
+        constructor(x, y, color) {
+            this.x = x;
+            this.y = y;
+            this.color = color;
+            this.radius = Math.random() * 2 + 1;
+            this.speedX = Math.random() * 4 - 2;
+            this.speedY = Math.random() * 4 - 2;
+            this.alpha = 1;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.alpha -= 0.02;
+            this.draw();
+        }
+
+        draw() {
+            ctx.save();
+            ctx.globalAlpha = this.alpha;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+
+
+    function launchFirework() {
+        const targetX = Math.random() * canvas.width;
+        const targetY = Math.random() * (canvas.height / 2);
+        fireworks.push(new Firework(canvas.width / 2, canvas.height, targetX, targetY));
+    }
+    function launchFirework1() {
+        console.log('hello pzz');
+        const targetX = Math.random() * canvas1.width;
+        const targetY = Math.random() * (canvas1.height / 2);
+        fireworks1.push(new Firework1(canvas1.width / 2, canvas1.height, targetX, targetY));
+    }
+
+    // Fade in text update function
+    function fadeInText() {
+        texts.forEach(text => {
+            if (text.alpha < 1) {
+                text.alpha += 0.5; // Increment the alpha for fade-in effect
+            }
+            ctx.font = text.font;
+            ctx.fillStyle = text.color;
+            ctx.globalAlpha = text.alpha;
+            ctx.fillText(text.text, text.x - ctx.measureText(text.text).width / 2, text.y);
+        });
+    }
+    function fadeInText1() {
+        texts1.forEach(text => {
+            if (text.alpha < 1) {
+                text.alpha += 0.5; // Increment the alpha for fade-in effect
+            }
+            ctxx.font = text.font;
+            ctxx.fillStyle = text.color;
+            ctxx.globalAlpha = text.alpha;
+            ctxx.fillText(text.text, text.x - ctx.measureText(text.text).width / 4, text.y);
+        });
+    }
+
+    function animate() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        fireworks.forEach((firework, index) => {
+            firework.update();
+            if (firework.exploded) fireworks.splice(index, 1);
+        });
+
+        particles.forEach((particle, index) => {
+            particle.update();
+            if (particle.alpha <= 0) particles.splice(index, 1);
+        });
+
+        fadeInText(); // Call fadeInText to show texts with the fade-in effect
+
+        requestAnimationFrame(animate);
+    }
+    function animate1() {
+        ctxx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctxx.fillRect(0, 0, canvas1.width, canvas1.height);
+
+        fireworks1.forEach((firework1, index) => {
+            firework1.update();
+            if (firework1.exploded) fireworks1.splice(index, 1);
+        });
+
+        particles1.forEach((particle1, index) => {
+            particle1.update();
+            if (particle1.alpha <= 0) particles1.splice(index, 1);
+        });
+
+        fadeInText1(); // Call fadeInText to show texts with the fade-in effect
+
+        requestAnimationFrame(animate1);
+    }
+
+    // Launch fireworks continuously
+   // Launch first fireworks
+setInterval(launchFirework, 800); // Launch every 800ms
+
+// Launch second fireworks
+setInterval(launchFirework1, 800); // Launch every 800ms
+
+// Combined window.onload
+window.onload = () => {
+    animate();  // Call the first animation loop
+    animate1(); // Call the second animation loop
+};
+
+
+    /**/
+    
+</script>
+
+
+
+</body>
+</html>
