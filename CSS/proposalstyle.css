@@ -106,6 +106,7 @@ body::-webkit-scrollbar {
 }
 .page2 .pg2-cont p{
     margin-top: 10px;
+    color:"darkgrey";
 }
 .pg2-final{
     display: flex;
