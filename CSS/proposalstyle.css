@@ -106,7 +106,6 @@ body::-webkit-scrollbar {
 }
 .page2 .pg2-cont p{
     margin-top: 10px;
-    font-family:"", cursive;
 }
 .pg2-final{
     display: flex;
@@ -215,7 +214,6 @@ font-size: 22px;
     box-shadow: 0 4ox 8px rgba(0, 0, 0, 0.2);
     margin-top: 60%;
     text-align: left;
-    font-family: "", cursive;
     border: none;
     backdrop-filter: blur(2px);
 }
