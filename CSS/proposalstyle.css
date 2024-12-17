@@ -75,7 +75,7 @@ body::-webkit-scrollbar {
     animation: fadeIn 2s ease-in-out;
 }
 .page1 p{
-    font-family: "Sacramento", cursive;
+     font-family: "Redressed", cursive;
     animation: fadeIn 2s ease-in-out;
 }
 .playbtn{
@@ -107,7 +107,7 @@ body::-webkit-scrollbar {
 }
 .page2 .pg2-cont p{
     margin-top: 10px;
-    font-family:"Redressed", cursive;
+    font-family:"", cursive;
 }
 .pg2-final{
     display: flex;
@@ -198,7 +198,7 @@ font-size: 22px;
 }
 .page2 p{
     font-size: 16px;
-    font-family:"Redressed", cursive ;
+     font-family: "Redressed", cursive;
 }
 .responsebtn{
     width:30%;
@@ -216,7 +216,7 @@ font-size: 22px;
     box-shadow: 0 4ox 8px rgba(0, 0, 0, 0.2);
     margin-top: 60%;
     text-align: left;
-    font-family: "Redressed", cursive;
+    font-family: "", cursive;
     border: none;
     backdrop-filter: blur(2px);
 }
@@ -225,4 +225,6 @@ font-size: 22px;
     color:darkgray;
     font-family: "Sacramento", cursive;
 }
+.text p{
+     font-family: "Redressed", cursive;
 }
