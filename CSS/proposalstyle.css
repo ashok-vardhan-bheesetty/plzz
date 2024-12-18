@@ -195,7 +195,14 @@ canvas {
     color:gray;
 }
 
-
+.text img{
+    width:200px;
+    height: 100%;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 70%;
+    animation: fadeIn 3s ease-in-out;
+}
 
 @media(max-width:768px){
     .page1{
@@ -239,5 +246,8 @@ font-size: 22px;
 }
 .text p{
 font-size: 12px;
+}
+.text img{
+    margin: auto;
 }
 }
