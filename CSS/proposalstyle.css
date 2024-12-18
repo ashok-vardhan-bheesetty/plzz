@@ -168,19 +168,19 @@ canvas {
 .page3 .text {
     position: absolute;
     font-size: 12px;
-    padding: 5%;
+    padding: 2%;
     margin:auto;
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
- /* Possible typo: 4ox should be 4px */
     text-align: left;
     border: none;
     backdrop-filter: blur(2px);
     box-sizing: border-box;
     width: 60%;
     height: auto;
-    margin-top: 30vh;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 0px;
+    margin-top: 30vh;
 }
 
 
@@ -199,7 +199,7 @@ canvas {
     width:200px;
     height: 100%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 70%;
     animation: fadeIn 3s ease-in-out;
 }
